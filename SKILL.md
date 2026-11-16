@@ -1,6 +1,6 @@
 ---
 name: mobile-responsive-autoscale
-description: Comprehensive methodology and actionable patterns for implementing zero-horizontal-scroll mobile responsive layouts, auto-scaled card views from data tables, hierarchical tree cards, executive modals with top margins, touch ergonomics, high-contrast dark mode, and strict EEI Blue spectrum branding across React, Tailwind CSS, Vite, and modern enterprise web applications.
+description: Comprehensive methodology and actionable patterns for implementing zero-horizontal-scroll mobile responsive layouts, auto-scaled card views from data tables, hierarchical tree cards, executive modals with top margins, touch ergonomics, high-contrast dark mode, and strict Enterprise Blue spectrum branding across React, Tailwind CSS, Vite, and modern enterprise web applications.
 ---
 
 # Mobile Responsive & Autoscale Content Skill
@@ -20,7 +20,7 @@ Activate this skill when:
 - Optimizing mobile touch targets, safe-area insets (`env(safe-area-inset-*)`), and sticky bottom actions.
 - Resolving low-contrast text and washed-out badges in dark mode across dashboard widgets and kanban columns.
 - Making page action bars and segmented toolbars stay inline on desktop without wrapping awkwardly or breaking on mobile.
-- Enforcing the **Strict EEI Blue Spectrum** branding (zero purple/indigo classes).
+- Enforcing the **Strict Enterprise Blue Spectrum** branding (zero purple/indigo classes).
 
 ---
 
@@ -32,8 +32,8 @@ Activate this skill when:
    Outer wrappers must use `w-full max-w-full overflow-hidden` or `overflow-x-hidden`. Never set fixed pixel widths (`w-[1200px]`) on container elements without responsive constraints (`max-w-full`).
 3. **Modal Margin-Top & Vertical Breathing Space:**
    Never center large modals with `items-center` without generous margins; on mobile and small laptop screens, large modals cling awkwardly to the browser top bar. Always use `items-start justify-center` with explicit top spacing (`pt-6 sm:pt-10 md:pt-14` or `mt-6 sm:mt-10 mb-6 sm:mb-10`) and a maximum height constraint (`max-h-[88vh] sm:max-h-[86vh] flex flex-col`).
-4. **Strict EEI Blue Brand Spectrum (Zero Purple/Indigo Policy):**
-   In this enterprise application, all primary actions, active indicators, badges, highlights, focus rings, and modal icon backgrounds must strictly adhere to the **EEI Blue Spectrum** (`blue-600`, `blue-700`, `sky-500`, `teal-500`). Never introduce `indigo-*` or `purple-*` classes in UI components.
+4. **Strict Enterprise Blue Brand Spectrum (Zero Purple/Indigo Policy):**
+   In this enterprise application, all primary actions, active indicators, badges, highlights, focus rings, and modal icon backgrounds must strictly adhere to the **Enterprise Blue Spectrum** (`blue-600`, `blue-700`, `sky-500`, `teal-500`). Never introduce `indigo-*` or `purple-*` classes in UI components.
 5. **Touch Ergonomics:**
    Interactive buttons on mobile must have a minimum hit target of `38px` to `44px`, with tap feedback (`active:scale-95 transition-all`).
 6. **Content-Aware Truncation:**
@@ -544,7 +544,7 @@ Before marking any mobile responsive task complete:
   ```
   Expected: **`false`**.
 - [ ] **Modal Margin-Top Audit:** Confirm modals have at least `24px` (`mt-6`) top clearance and do not cling to the top bar.
-- [ ] **Strict EEI Blue Verification:** Run grep check across modified files for banned colors:
+- [ ] **Strict Enterprise Blue Verification:** Run grep check across modified files for banned colors:
   ```powershell
   Select-String -Path "src\**\*.tsx" -Pattern "(indigo|purple)-"
   ```
